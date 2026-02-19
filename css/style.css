@@ -525,3 +525,58 @@ transform:translateX(-100%);
 .announcement-bar:hover .announcement-track{
 animation-play-state:paused;
 }
+
+
+
+
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #222;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover Effects */
+.icon:hover {
+    transform: translateY(-8px) scale(1.1);
+}
+
+/* Individual colors */
+.instagram:hover {
+    background: #e1306c;
+}
+
+.whatsapp:hover {
+    background: #25d366;
+}
+
+.facebook:hover {
+    background: #1877f2;
+}
+
+.youtube:hover {
+    background: #ff0000;
+}
+
+.google:hover {
+    background: #4285f4;
+}
