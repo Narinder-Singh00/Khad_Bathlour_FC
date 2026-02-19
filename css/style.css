@@ -67,6 +67,7 @@ padding:20px;
 font-size:40px;
 }
 
+
 /* CONTAINER */
 
 .container{
@@ -579,4 +580,81 @@ animation-play-state:paused;
 
 .google:hover {
     background: #4285f4;
+}
+
+
+.about {
+    background-image: url("about-bg.png");
+    background-size: cover;       /* fill full area */
+    background-position: center;  /* center image */
+    background-repeat: no-repeat; /* prevent repeat */
+
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+
+    position: relative;
+}
+
+/* Optional dark overlay for better text visibility */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.about-hero{
+height:90vh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.about-slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 1s ease-in-out;
+}
+
+.about-slide.active{
+opacity:1;
+}
+
+.about-overlay{
+position:absolute;
+background:rgba(0,0,0,0.5);
+width:100%;
+height:100%;
+}
+
+.about-content{
+position:relative;
+z-index:2;
+color:white;
+}
+
+.about-content h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.about-content p{
+font-size:18px;
 }
