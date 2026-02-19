@@ -1,0 +1,483 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:black;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:purple;
+padding:15px 30px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1508098682722-e99c643e7f0b") center/cover;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.7);
+padding:20px;
+font-size:40px;
+}
+
+/* CONTAINER */
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#111;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+}
+
+/* BUTTON */
+
+.btn{
+background:purple;
+padding:10px 20px;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* CONTACT FORM */
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:purple;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:purple;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+.hero h1{
+font-size:25px;
+}
+
+}
+
+
+
+
+/* gallery */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(90deg,purple,black);
+padding:15px 25px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:17px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#c77dff;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:url("https://images.unsplash.com/photo-1551958219-acbc608c6377") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:20px 30px;
+font-size:42px;
+border-radius:10px;
+}
+
+/* CONTAINER */
+
+.container{
+padding:40px 25px;
+}
+
+/* CARD */
+
+.card{
+background:#111;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* PLAYER CARD */
+
+.player-card{
+background:#111;
+border-radius:15px;
+overflow:hidden;
+transition:transform .4s ease, box-shadow .4s ease;
+position:relative;
+transform-style:preserve-3d;
+}
+
+.player-card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.player-info{
+padding:15px;
+background:linear-gradient(180deg,transparent,black);
+position:absolute;
+bottom:0;
+width:100%;
+}
+
+.player-info h3{
+font-size:20px;
+}
+
+.player-info p{
+font-size:14px;
+color:#ccc;
+}
+
+/* HOVER EFFECT */
+
+.player-card:hover{
+transform:rotateY(8deg) rotateX(8deg) scale(1.05);
+box-shadow:0 20px 40px rgba(128,0,128,.6);
+}
+
+/* TOUCH ACTIVE */
+
+.player-card:active{
+transform:scale(0.98);
+}
+
+/* FORM */
+
+input, textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+}
+
+button{
+background:purple;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+right:0;
+top:60px;
+background:black;
+flex-direction:column;
+width:220px;
+padding:20px;
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+}
+
+
+
+
+/* TEAM SELECT */
+
+.team-select{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.team-btn{
+background:#111;
+padding:15px 25px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+border:2px solid purple;
+}
+
+.team-btn:hover{
+background:purple;
+}
+
+/* TEAM TITLE */
+
+.team-title{
+font-size:28px;
+margin-bottom:20px;
+color:#c77dff;
+}
+
+/* PLAYER GRID */
+
+.players{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* PLAYER CARD */
+
+.player{
+background:#111;
+border-radius:15px;
+overflow:hidden;
+cursor:pointer;
+transition:transform .4s, box-shadow .4s;
+position:relative;
+}
+
+.player img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.player-basic{
+padding:15px;
+}
+
+.player-basic h3{
+margin-bottom:5px;
+}
+
+.player-basic p{
+font-size:14px;
+color:#ccc;
+}
+
+/* HOVER EFFECT */
+
+.player:hover{
+transform:scale(1.05) rotateY(5deg);
+box-shadow:0 20px 40px rgba(128,0,128,.6);
+}
+
+/* EXPANDED */
+
+.player.expanded{
+grid-column:span 2;
+transform:scale(1.02);
+}
+
+/* PROGRESS SECTION */
+
+.player-progress{
+max-height:0;
+overflow:hidden;
+padding:0 15px;
+transition:.5s;
+}
+
+.player.expanded .player-progress{
+max-height:300px;
+padding:15px;
+}
+
+/* PROGRESS BAR */
+
+.progress-box{
+margin-bottom:10px;
+}
+
+.progress-box span{
+font-size:14px;
+}
+
+.progress{
+background:#333;
+height:8px;
+border-radius:5px;
+margin-top:5px;
+}
+
+.progress div{
+background:purple;
+height:100%;
+border-radius:5px;
+}
+
