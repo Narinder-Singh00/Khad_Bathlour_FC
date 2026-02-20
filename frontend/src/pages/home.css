@@ -1,26 +1,12 @@
 .hero {
-
   height: 90vh;
 
-  background: url("https://images.unsplash.com/photo-1508098682722-e99c643e7f0b") center/cover no-repeat;
-
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 
-}
-
-.hero-text {
-  padding-left: 40px;
-}
-
-@media(max-width:768px){
-
-  .hero {
-    height: 70vh;
-  }
-
-  .hero-text h1 {
-    font-size: 26px;
-  }
-
+  background-image: url("https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
