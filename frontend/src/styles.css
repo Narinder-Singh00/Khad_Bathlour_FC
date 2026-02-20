@@ -178,9 +178,50 @@ body {
   }
 
 }
+.about-page {
+  background-image: url("../assets/about.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+/* Overlay fix */
 .about-overlay {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
   padding: 30px;
   border-radius: 10px;
   max-width: 600px;
+  width: 100%;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+
+  .about-page {
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+  }
+
+  .about-overlay {
+    padding: 20px;
+  }
+
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+  .about-page {
+    background-size: contain; /* prevents half image cut */
+    background-color: black;
+  }
+
 }
