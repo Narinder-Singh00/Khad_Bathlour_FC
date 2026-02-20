@@ -3,27 +3,40 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
 
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="nav">
 
+      {/* LEFT LOGO */}
       <div className="nav-left">
         <h2 className="logo">FC Football</h2>
       </div>
 
-      <div className={`nav-right ${open ? "active" : ""}`}>
-        <Link to="/" onClick={()=>setOpen(false)}>Home</Link>
-        <Link to="/about" onClick={()=>setOpen(false)}>About</Link>
-        <Link to="/teams" onClick={()=>setOpen(false)}>Teams</Link>
-        <Link to="/achievements" onClick={()=>setOpen(false)}>Achievements</Link>
-        <Link to="/tournaments" onClick={()=>setOpen(false)}>Tournaments</Link>
-        <Link to="/gallery" onClick={()=>setOpen(false)}>Gallery</Link>
-        <Link to="/contact" onClick={()=>setOpen(false)}>Contact</Link>
+      {/* HAMBURGER */}
+      <div className="hamburger" onClick={toggleMenu}>
+        ☰
       </div>
 
-      <div className="hamburger" onClick={()=>setOpen(!open)}>
-        ☰
+      {/* RIGHT MENU */}
+      <div className={`nav-right ${menuOpen ? "show" : ""}`}>
+
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/teams" onClick={closeMenu}>Teams</Link>
+        <Link to="/achievements" onClick={closeMenu}>Achievements</Link>
+        <Link to="/tournaments" onClick={closeMenu}>Tournaments</Link>
+        <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
+
       </div>
 
     </nav>

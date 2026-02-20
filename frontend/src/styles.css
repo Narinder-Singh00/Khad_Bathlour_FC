@@ -144,3 +144,59 @@ body {
   }
 
 }
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #6a0dad, black);
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo {
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    width: 220px;
+    padding: 15px;
+    border-left: 2px solid #6a0dad;
+  }
+
+  .nav-right.show {
+    display: flex;
+  }
+
+}
