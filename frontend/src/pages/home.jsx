@@ -10,7 +10,7 @@ export default function Home() {
 
         <div className="hero-text">
           <h1>FC Football Club</h1>
-          <p>Welcome to official football website</p>
+          <p>Welcome to Khad Bathlour FC Official Website</p>
         </div>
       </div>
 
