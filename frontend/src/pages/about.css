@@ -1,0 +1,21 @@
+.about-page {
+
+  min-height: 100vh;
+
+  background: url("../assets/about.png") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.about-overlay {
+
+  background: rgba(0,0,0,0.6);
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+}

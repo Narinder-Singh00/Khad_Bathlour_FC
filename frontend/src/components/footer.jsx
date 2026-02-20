@@ -1,7 +1,9 @@
-export default function Footer() {
+import "./footer.css";
+
+export default function Footer(){
   return (
     <footer className="footer">
-      <p>© 2026 Khad Bathlour FC</p>
+      © 2026 Khad Bathlour FC
     </footer>
   );
 }
