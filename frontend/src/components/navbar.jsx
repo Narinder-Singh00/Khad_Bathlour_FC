@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="nav">
 
       <div className="nav-left">
-        <h2 className="logo">FC Football</h2>
+        <h2 className="logo">Khad Bathlour FC</h2>
       </div>
 
       <div className={`nav-right ${open ? "active" : ""}`}>
