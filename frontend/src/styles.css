@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* NAVBAR */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4b0082, #000000);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right a:hover {
+  color: #bb86fc;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* PAGE */
+
+.page {
+  padding: 20px;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 12px;
+  margin-top: 10px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #4b0082;
+  padding: 15px;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: #000;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 10px;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+}
