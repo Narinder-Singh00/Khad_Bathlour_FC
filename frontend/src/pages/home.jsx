@@ -9,7 +9,7 @@ export default function Home() {
         />
 
         <div className="hero-text">
-          <h1>FC Football Club</h1>
+          <h1>Khad Bathlour Football Club</h1>
           <p>Welcome to Khad Bathlour FC Official Website</p>
         </div>
       </div>
