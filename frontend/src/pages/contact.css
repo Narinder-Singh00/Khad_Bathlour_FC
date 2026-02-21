@@ -1,0 +1,138 @@
+.contact-page{
+  min-height:100vh;
+  background:black;
+  color:white;
+  padding:20px;
+}
+
+.contact-title{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+
+/* CONTAINER */
+
+.contact-container{
+  display:flex;
+  gap:20px;
+}
+
+
+/* LEFT */
+
+.contact-left{
+  flex:1;
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid purple;
+}
+
+.contact-left form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-left input,
+.contact-left textarea{
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  background:#222;
+  color:white;
+}
+
+.contact-left textarea{
+  height:100px;
+}
+
+.contact-left button{
+  padding:10px;
+  background:purple;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+.contact-left button:hover{
+  background:#a020f0;
+}
+
+
+/* CLUB INFO */
+
+.club-info{
+  margin-top:20px;
+}
+
+
+
+/* RIGHT */
+
+.contact-right{
+  flex:1;
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid purple;
+}
+
+.contact-right form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-right input{
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  background:#222;
+  color:white;
+}
+
+.contact-right button{
+  padding:10px;
+  background:purple;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.contact-right button:hover{
+  background:#a020f0;
+}
+
+
+
+/* QUICK LINKS */
+
+.quick-links{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.quick-links a{
+  text-decoration:none;
+  color:white;
+}
+
+.quick-links a:hover{
+  color:purple;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .contact-container{
+    flex-direction:column;
+  }
+
+}
