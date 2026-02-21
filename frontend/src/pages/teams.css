@@ -42,7 +42,7 @@
 .team-buttons button:hover,
 .team-buttons .active {
 
-  background: cyan;
+  background: rgba(92, 16, 173, 0.881);
   color: black;
 
 }
