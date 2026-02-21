@@ -1,10 +1,11 @@
 .tournament-page{
   min-height:100vh;
-  background:rgb(135, 67, 121);
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(255, 255, 255, 0)),
+    url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e") no-repeat center center/cover;
   color:white;
   padding:20px;
 }
-
 
 /* MATCH BAR */
 

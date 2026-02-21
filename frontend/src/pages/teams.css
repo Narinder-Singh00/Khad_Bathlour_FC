@@ -1,10 +1,18 @@
-.teams-page {
+.teams-page{
+  min-height:100vh;   /* full screen height */
+  
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1551958219-acbc608c6377");
+    
+  background-size:cover;        /* fill full screen */
+  background-position:center;   /* center image */
+  background-repeat:no-repeat;  /* prevent repeat */
+  background-attachment:fixed;  /* optional smooth effect */
 
-  padding: 40px;
-  text-align: center;
-
+  color:white;
+  padding:20px;
 }
-
 /* TEAM BUTTONS */
 
 .team-buttons {
