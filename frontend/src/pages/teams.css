@@ -71,7 +71,7 @@
 
   border-radius: 20px;
 
-  border: 2px solid cyan;
+  border: 2px solid rgba(92, 16, 173, 0.881);
 
   overflow: hidden;
 
@@ -79,7 +79,7 @@
 
   transition: 0.4s;
 
-  box-shadow: 0 0 15px cyan;
+  box-shadow: 0 0 15px rgba(92, 16, 173, 0.881);
 
 }
 
@@ -89,7 +89,7 @@
 
   transform: translateY(-15px) scale(1.05) rotate(-2deg);
 
-  box-shadow: 0 0 35px cyan;
+  box-shadow: 0 0 35px rgba(92, 16, 173, 0.881);
 
 }
 
