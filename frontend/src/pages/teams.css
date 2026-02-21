@@ -1,102 +1,152 @@
 .teams-page {
-  padding: 20px;
+
+  padding: 40px;
+  text-align: center;
+
 }
 
-.teams-buttons {
-  margin-bottom: 20px;
+/* TEAM BUTTONS */
+
+.team-buttons {
+
+  margin-bottom: 30px;
+
 }
 
-.teams-buttons button {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background: #4b0082;
+.team-buttons button {
+
+  padding: 10px 25px;
+  margin: 10px;
+
+  background: black;
   color: white;
-  border: none;
+
+  border: 2px solid cyan;
+
+  border-radius: 10px;
+
   cursor: pointer;
-  border-radius: 5px;
+
+  transition: 0.3s;
+
 }
 
-.teams-buttons button.active {
-  background: #bb86fc;
+.team-buttons button:hover,
+.team-buttons .active {
+
+  background: cyan;
+  color: black;
+
 }
 
 /* CARDS GRID */
+
 .cards-container {
+
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-  gap: 20px;
+
+  grid-template-columns: repeat(4, 250px);
+
+  justify-content: center;
+
+  gap: 30px;
+
 }
 
-/* PLAYER CARD */
+/* CARD */
+
 .player-card {
-  background: #1a1a1a;
-  border-radius: 15px;
+
+  height: 350px;
+
+  background: #111;
+
+  border-radius: 20px;
+
+  border: 2px solid cyan;
+
   overflow: hidden;
+
   cursor: pointer;
-  transition: transform 0.3s;
-  position: relative;
+
+  transition: 0.4s;
+
+  box-shadow: 0 0 15px cyan;
+
 }
+
+/* PUSH EFFECT */
 
 .player-card:hover {
-  transform: scale(1.05);
+
+  transform: translateY(-15px) scale(1.05) rotate(-2deg);
+
+  box-shadow: 0 0 35px cyan;
+
 }
 
-.card-img img {
+/* IMAGE TOP 75% */
+
+.img-box {
+
+  height: 75%;
+
+}
+
+.img-box img {
+
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.card-info {
-  padding: 15px;
-}
-
-.card-info h3 {
-  margin: 0 0 10px 0;
-}
-
-.card-stats {
-  padding: 15px;
-  background: #2a2a2a;
-}
-
-.card-stats .progress {
-  width: 100%;
-  height: 10px;
-  background: #555;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.card-stats .progress div {
   height: 100%;
-  background: #bb86fc;
-  border-radius: 5px;
+  object-fit: cover;
+
 }
 
-/* HOVER EDGE PULL EFFECT */
-.player-card::before,
-.player-card::after,
-.player-card div::before,
-.player-card div::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  transition: transform 0.3s;
+/* INFO BOTTOM */
+
+.info {
+
+  height: 25%;
+  padding: 10px;
+
+  background: #000;
+
 }
 
-.player-card:hover::before { transform: translate(-5px,-5px); }
-.player-card:hover::after { transform: translate(5px,5px); }
+.info h3 {
+
+  margin: 5px;
+  font-size: 18px;
+
+}
+
+.info p {
+
+  margin: 3px;
+  font-size: 14px;
+  color: #ccc;
+
+}
+
+/* TABLET */
+
+@media(max-width:1100px){
+
+  .cards-container {
+
+    grid-template-columns: repeat(2, 250px);
+
+  }
+
+}
 
 /* MOBILE */
-@media(max-width:768px){
+
+@media(max-width:600px){
+
   .cards-container {
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+
+    grid-template-columns: repeat(1, 250px);
+
   }
 
-  .card-img img {
-    height: 150px;
-  }
 }

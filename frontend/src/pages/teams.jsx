@@ -1,86 +1,102 @@
 import { useState } from "react";
-import "./teams.css";
+import "./Teams.css";
 
-const teamsData = {
+const teams = {
+
   A: [
-    { name: "Player 1", age: 24, birth: "1999-02-15", matches: 50, img: "https://i.pravatar.cc/300?img=12", stats:{speed:80,durability:70,fitness:90} },
-    { name: "Player 2", age: 26, birth: "1997-05-20", matches: 60, img: "https://i.pravatar.cc/300?img=12", stats:{speed:70,durability:60,fitness:80} },
-    { name: "Player 3", age: 23, birth: "2000-08-10", matches: 40, img: "https://i.pravatar.cc/300?img=12", stats:{speed:90,durability:50,fitness:85} },
+    { name: "John Smith", age: 24, matches: 50, img: "https://picsum.photos/400/500?random=1" },
+    { name: "Alex Brown", age: 26, matches: 60, img: "https://picsum.photos/400/500?random=2" },
+    { name: "David Lee", age: 23, matches: 40, img: "https://picsum.photos/400/500?random=3" },
+    { name: "Chris Evans", age: 25, matches: 55, img: "https://picsum.photos/400/500?random=4" },
+    { name: "John Smith", age: 24, matches: 50, img: "https://picsum.photos/400/500?random=1" },
+    { name: "Alex Brown", age: 26, matches: 60, img: "https://picsum.photos/400/500?random=2" },
+    { name: "David Lee", age: 23, matches: 40, img: "https://picsum.photos/400/500?random=3" },
+    { name: "Chris Evans", age: 25, matches: 55, img: "https://picsum.photos/400/500?random=4" },
+    { name: "John Smith", age: 24, matches: 50, img: "https://picsum.photos/400/500?random=1" },
+    { name: "Alex Brown", age: 26, matches: 60, img: "https://picsum.photos/400/500?random=2" },
+    { name: "David Lee", age: 23, matches: 40, img: "https://picsum.photos/400/500?random=3" },
+    { name: "Chris Evans", age: 25, matches: 55, img: "https://picsum.photos/400/500?random=4" },
   ],
+
   B: [
-    { name: "Player 4", age: 25, birth: "1998-01-12", matches: 45, img: "https://i.pravatar.cc/300?img=12", stats:{speed:75,durability:80,fitness:70} },
-    { name: "Player 5", age: 27, birth: "1996-03-17", matches: 55, img: "https://i.pravatar.cc/300?img=12", stats:{speed:60,durability:90,fitness:65} },
-    { name: "Player 6", age: 22, birth: "2001-11-03", matches: 35, img: "https://i.pravatar.cc/300?img=12", stats:{speed:85,durability:70,fitness:90} },
+    { name: "Player B1", age: 22, matches: 35, img: "https://picsum.photos/400/500?random=5" },
+    { name: "Player B2", age: 27, matches: 70, img: "https://picsum.photos/400/500?random=6" },
+    { name: "Player B3", age: 24, matches: 45, img: "https://picsum.photos/400/500?random=7" },
+    { name: "Player B4", age: 28, matches: 80, img: "https://picsum.photos/400/500?random=8" },
   ],
+
   C: [
-    { name: "Player 7", age: 24, birth: "1999-09-12", matches: 40, img: "https://i.pravatar.cc/300?img=12", stats:{speed:70,durability:80,fitness:75} },
-    { name: "Player 8", age: 26, birth: "1997-06-18", matches: 50, img: "https://i.pravatar.cc/300?img=12", stats:{speed:65,durability:85,fitness:80} },
-    { name: "Player 9", age: 23, birth: "2000-04-10", matches: 45, img: "https://i.pravatar.cc/300?img=12", stats:{speed:80,durability:70,fitness:85} },
+    { name: "Player C1", age: 21, matches: 30, img: "https://picsum.photos/400/500?random=9" },
+    { name: "Player C2", age: 26, matches: 60, img: "https://picsum.photos/400/500?random=10" },
+    { name: "Player C3", age: 25, matches: 55, img: "https://picsum.photos/400/500?random=11" },
+    { name: "Player C4", age: 29, matches: 90, img: "https://picsum.photos/400/500?random=12" },
   ],
+
   D: [
-    { name: "Player 10", age: 25, birth: "1998-12-20", matches: 60, img: "https://i.pravatar.cc/300?img=12", stats:{speed:90,durability:60,fitness:80} },
-    { name: "Player 11", age: 27, birth: "1996-08-30", matches: 55, img: "https://i.pravatar.cc/300?img=12", stats:{speed:70,durability:75,fitness:65} },
-    { name: "Player 12", age: 22, birth: "2001-02-14", matches: 35, img: "https://i.pravatar.cc/300?img=12", stats:{speed:85,durability:80,fitness:90} },
-  ],
+    { name: "Player D1", age: 23, matches: 40, img: "https://picsum.photos/400/500?random=13" },
+    { name: "Player D2", age: 24, matches: 50, img: "https://picsum.photos/400/500?random=14" },
+    { name: "Player D3", age: 27, matches: 75, img: "https://picsum.photos/400/500?random=15" },
+    { name: "Player D4", age: 28, matches: 85, img: "https://picsum.photos/400/500?random=16" },
+  ]
+
 };
 
 export default function Teams() {
+
   const [activeTeam, setActiveTeam] = useState("A");
-  const [openCardIndex, setOpenCardIndex] = useState(null);
 
   return (
-    <div className="teams-page">
-      <h1>Teams</h1>
 
-      <div className="teams-buttons">
-        {["A","B","C","D"].map(t => (
-          <button 
-            key={t} 
-            className={activeTeam===t?"active":""} 
-            onClick={()=>{setActiveTeam(t); setOpenCardIndex(null);}}
+    <div className="teams-page">
+
+      <h1>Our Teams</h1>
+
+      {/* Team buttons */}
+      <div className="team-buttons">
+
+        {["A","B","C","D"].map(team => (
+
+          <button
+            key={team}
+            className={activeTeam === team ? "active" : ""}
+            onClick={() => setActiveTeam(team)}
           >
-            Team {t}
+            Team {team}
           </button>
+
         ))}
+
       </div>
 
+      {/* Cards */}
       <div className="cards-container">
-        {teamsData[activeTeam].map((player, idx) => (
-          <div 
-            key={idx} 
-            className="player-card" 
-            onClick={()=>setOpenCardIndex(openCardIndex===idx?null:idx)}
-          >
-            <div className="card-img">
-              <img src={player.img} alt={player.name} />
-            </div>
-            <div className="card-info">
-              <h3>{player.name}</h3>
-              <p>Age: {player.age}</p>
-              <p>Birth: {player.birth}</p>
-              <p>Matches: {player.matches}</p>
+
+        {teams[activeTeam].map((player, i) => (
+
+          <div className="player-card" key={i}>
+
+            <div className="img-box">
+              <img src={player.img}/>
             </div>
 
-            {openCardIndex===idx && (
-              <div className="card-stats">
-                <div>
-                  <span>Speed</span>
-                  <div className="progress"><div style={{width:`${player.stats.speed}%`}}></div></div>
-                </div>
-                <div>
-                  <span>Durability</span>
-                  <div className="progress"><div style={{width:`${player.stats.durability}%`}}></div></div>
-                </div>
-                <div>
-                  <span>Fitness</span>
-                  <div className="progress"><div style={{width:`${player.stats.fitness}%`}}></div></div>
-                </div>
-              </div>
-            )}
+            <div className="info">
+
+              <h3>{player.name}</h3>
+
+              <p>Age: {player.age}</p>
+
+              <p>Matches: {player.matches}</p>
+
+            </div>
 
           </div>
+
         ))}
+
       </div>
+
     </div>
+
   );
+
 }

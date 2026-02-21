@@ -15,7 +15,6 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/teams">Teams</Link>
-        <Link to="/achievements">Achievements</Link>
         <Link to="/tournaments">Tournaments</Link>
         <Link to="/gallery">Gallery</Link>
         <Link to="/contact">Contact</Link>
