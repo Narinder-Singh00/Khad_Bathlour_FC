@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Teams.css";
+import "./teams.css";
 
 const teams = {
 
